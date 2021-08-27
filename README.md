@@ -18,7 +18,7 @@ For this project, we used 2 different mammogram datasets of differing sizes and 
 
 #### DDSM Datasets
 [Link DDSM EDA Notebook]
-![density_subtlety](images/density_subtlety.png)
+![density_subtlety](images/ddsm_density_subtlety.png)
 
 ### Modeling & Analysis
 #### MIAS Modeling
