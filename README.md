@@ -10,4 +10,19 @@ For this project, we used 2 different mammogram datasets of differing sizes and 
 
 ## Project Workflow
 
+### Data Sourcing, Cleaning & EDA
+
+#### MIAS Dataset
+Link MIAS EDA Notebook
+
+#### DDSM Datasets
+Link DDSM EDA Notebook
+
+### Modeling & Analysis
+#### MIAS Modeling
+Link MIAS Modeling Notebook
+
+#### DDSM Modeling
+Link DDSM Modeling Notebook
+
 ## Conclusions & Recommendations
