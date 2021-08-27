@@ -1,0 +1,21 @@
+# Software and Hardware Requirements
+
+For adequate running:
+
+MIAS dataset – 350 MB storage
+DDSM – 6 GB Storage
+8+ GB GPU VRAM or 16+ GB RAM
+
+Python Requirements:
+Pandas
+TensorFlow (2.5.0 used, 1.13+ recommended, some issues for versions 2+, somewhat fixed with Mask-RCNN-TF2)
+ - GPU tensorflow recommended if rerunning CNN searches or Mask RCNN
+Numpy
+Matplotlib
+xml
+glob
+scikit-learn (downgrade to 0.23.2 if running BayesSearchCV)
+os
+seaborn
+scikit-optimize 
+mrcnn (https://github.com/matterport/Mask_RCNN/ or https://github.com/ahmedfgad/Mask-RCNN-TF2)
