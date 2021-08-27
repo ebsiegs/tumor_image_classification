@@ -24,7 +24,7 @@ For this project, we used 2 different mammogram datasets of differing sizes and 
 
 ### Modeling & Analysis
 #### MIAS Modeling
-[Link MIAS Base CNN Modeling Notebook]
+![Part 1B - MIAS Base CNN Modeling.ipynb](https://git.generalassemb.ly/ebsiegs/tumor_classification/tree/master/code/Part 1B - MIAS Base CNN Modeling.ipynb)
 [Link MIAS Mask RCNN Modeling Notebook]
 
 ![mias_model](images/mias_model.png)
