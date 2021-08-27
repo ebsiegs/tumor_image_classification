@@ -26,3 +26,12 @@ Link MIAS Modeling Notebook
 Link DDSM Modeling Notebook
 
 ## Conclusions & Recommendations
+
+## References
+1. MIAS Data Source: http://peipa.essex.ac.uk/info/mias.html
+2. DDSM Data Source 2: https://wiki.cancerimagingarchive.net/display/Public/CBIS-DDSM
+3. https://www.kaggle.com/kmader/mias-mammography
+4. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5954872/
+5. https://pubmed.ncbi.nlm.nih.gov/24209932/
+6. https://core.ac.uk/download/pdf/21748057.pdf
+7. https://www.nature.com/articles/sdata2017177
