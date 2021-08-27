@@ -17,7 +17,7 @@ Link MIAS EDA Notebook
 
 #### DDSM Datasets
 Link DDSM EDA Notebook
-![variance](images/variance.png)
+![density_subtlety](images/density_subtlety.png)
 
 ### Modeling & Analysis
 #### MIAS Modeling
