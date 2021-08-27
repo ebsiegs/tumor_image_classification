@@ -14,10 +14,12 @@ For this project, we used 2 different mammogram datasets of differing sizes and 
 
 #### MIAS Dataset
 [Link MIAS EDA Notebook]
+
 ![mias_mask](images/mias_mask.png)
 
 #### DDSM Datasets
 [Link DDSM EDA Notebook]
+
 ![density_subtlety](images/ddsm_density_subtlety.png)
 
 ### Modeling & Analysis
@@ -31,6 +33,7 @@ For this project, we used 2 different mammogram datasets of differing sizes and 
 [Link DDSM Modeling Notebook]
 
 Beat Baseline with 92-93% accuracy on Test and Validation datasets
+
 ![ddsm_model](images/ddsm_model.png)
 
 ## Conclusions & Recommendations
