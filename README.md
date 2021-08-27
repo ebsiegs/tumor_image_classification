@@ -13,20 +13,31 @@ For this project, we used 2 different mammogram datasets of differing sizes and 
 ### Data Sourcing, Cleaning & EDA
 
 #### MIAS Dataset
-Link MIAS EDA Notebook
+[Link MIAS EDA Notebook]
+![mias_mask](images/mias_mask.png)
 
 #### DDSM Datasets
-Link DDSM EDA Notebook
+[Link DDSM EDA Notebook]
 ![density_subtlety](images/density_subtlety.png)
 
 ### Modeling & Analysis
 #### MIAS Modeling
-Link MIAS Modeling Notebook
+[Link MIAS Base CNN Modeling Notebook]
+[Link MIAS Mask RCNN Modeling Notebook]
+
+![mias_model](images/mias_model.png)
 
 #### DDSM Modeling
-Link DDSM Modeling Notebook
+[Link DDSM Modeling Notebook]
+
+Beat Baseline with 92-93% accuracy on Test and Validation datasets
+![ddsm_model](images/ddsm_model.png)
 
 ## Conclusions & Recommendations
+- Using ML for tumor/no tumor image classification is a useful approach, however, it is not without its challenges!
+- Larger training datasets improve accuracy and reduce overfitting
+- Be careful of data leakage! Always do your train test split before any image augmentation. 
+- With more time and further learning, there are a few more  image processing techniques and ML models to try in taking this work further.
 
 ## References
 1. MIAS Data Source: http://peipa.essex.ac.uk/info/mias.html
