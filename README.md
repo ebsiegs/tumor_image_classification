@@ -20,7 +20,7 @@ The MIAS dataset was cleaned and various attempts at a CNN and classification we
 
 The accuracy topped out for the MIAS Dataset at 70%, which was more a result of fluctuations as the training set became overtrained. Baseline of guessing all cases as non-tumor were maintained until the training set began to overtrain, and then in the validation set, more tumors were then predicted at nominal success. Changing image size had varying success, and smaller images resulted in more consistent results. 
 
-A different approach of seeing if a Mask R-CNN could potentially correctly make masks for tumors to some success. Using a [tutorial](https://machinelearningmastery.com/how-to-train-an-object-detection-model-with-keras/) and a [forked version](https://github.com/ahmedfgad/Mask-RCNN-TF2) of the package was used. A dataset class was made for the mammograms, with two classifications, normal and tumor made, where a dummy bounding box of 0 pixels was made for the normal class. This performed well in some instances, alright in others, and poorly or not at all in the rest. The IoU was not calculated because the success rate was not high enough or consistent enough to consider it.
+A different approach of seeing if a Mask R-CNN could potentially correctly make masks for tumors to some success. Using a [tutorial](https://machinelearningmastery.com/how-to-train-an-object-detection-model-with-keras/) and a [forked version](https://github.com/ahmedfgad/Mask-RCNN-TF2) of the package, Mask R-CNN was implemented. A dataset class was made for the mammograms, with two classifications, normal and tumor made, where a dummy bounding box of 0 pixels was made for the normal class. This performed well in some instances, alright in others, and poorly or not at all in the rest. The IoU was not calculated because the success rate was not high enough or consistent enough to consider it.
 
 The CBIS-DDSM dataset was preprocessed before download, and most of the techniques attempted on MIAS could translate to here. The same fitting techniques were performed on this dataset, with the difference in maximum image size being limited to 299x299.  Smaller images again fit better on the validation set, most likely due to the model over training on image specific details, which was lost in the validation set. A separate validation set was used compared to the train-test set used for model evaluation. Most models achieved over 90% accuracy from the baseline of 87% on the separate validation set, with the best performing model reaching 93.1% accuracy and 92.1% f1-score. Future work would include the use of more robust measures for hopefully even more improved results. 
 
@@ -59,20 +59,18 @@ Beat Baseline with 92-93% accuracy on Test and Validation datasets
 
 The DDSM model was able to beat the baseline accuracy of 87% by 5% using the preprocessed images in the CBIS-DDSM data set.  While this model is a step in the correct direction, it may yet be accurate enough to help oncologists correctly identify tumors.  Another point of concern is the model has a high rate of providing false negatives, a particularly dangerous failure mode in such a model.  With additional work, these models can be a good first step in the quest for higher accuracy tumor identification models.
 
-The Mask R-CNN model on the MIAS data set while sometimes able to accurately apply a bounding box to tumors, was unreliable in its capability to detect tumors, based on a review of prediction images.  Potentially on a larger data set, such as the DDSM dataset, Mask R-CNN will yield better consistency
+The Mask R-CNN model on the MIAS data set was sometimes able to accurately apply a bounding box to tumors but was unreliable in its capability to detect tumors, based on a review of prediction images.  Potentially on a larger data set, such as the DDSM dataset, Mask R-CNN will yield better consistency.
 
 
 ## Recommendations
 
-With complex images like this a large data set, such as the DDSM is needed.  Generating models that could beat the baseline on the MIAS dataset of 322 images was difficult without overfitting the model. 
+With complex images like this a large data set is needed, such as the DDSM.  Generating models that could beat the baseline on the MIAS dataset of 322 images was difficult without overfitting the model. 
 
 Running these images through a CNN is resource intensive.  With additional computing power and models that resist overfitting, the full image could be fed through without downsizing giving the model a chance to detect smaller tumors.
 
-Additional clarification on the pre-processing done to the DDSM image set would help understand the value of the set.  Understanding how rotated images and copies of images was done would help clear assurances there is no data leakage between validation and train sets.
+Additional clarification on the pre-processing done to the DDSM image set would help understand the value of the set.  Understanding how images were rotated and copied would create clear assurances there is no data leakage between validation and train sets.
 
-Additional image manipulation may give the model a better chance to fit, and is an avenue to continue to look down.
-
-With the complexity of the issue, working alongside an expert in mammography and oncology is critical.  The addition of metadata may yield additional accuracy.  Another approach may be to not just look at each mammograph in isolation, but in a time series per patient.
+With the complexity of the issue, working alongside an expert in mammography and oncology would greatly help additional work.  The addition of metadata may yield additional accuracy.  Another approach may be to not just look at each mammograph in isolation, but in a time series per patient.
 
 
 ## References
