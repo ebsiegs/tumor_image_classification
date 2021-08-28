@@ -54,10 +54,25 @@ Beat Baseline with 92-93% accuracy on Test and Validation datasets
 ![ddsm_model](images/ddsm_model.png)
 
 ## Conclusions & Recommendations
-- Using ML for tumor/no tumor image classification is a useful approach, however, it is not without its challenges!
-- Larger training datasets improve accuracy and reduce overfitting
-- Be careful of data leakage! Always do your train test split before any image augmentation. 
-- With more time and further learning, there are a few more  image processing techniques and ML models to try in taking this work further.
+
+Conclusions:
+
+The DDSM model was able to beat the baseline accuracy of 87% by 5% using the preprocessed images in the CBIS-DDSM data set.  While this model is a step in the correct direction, it may yet be accurate enough to help oncologists correctly identify tumors.  Another point of concern is the model has a high rate of providing false negatives, a particularly dangerous failure mode in such a model.  With additional work, these models can be a good first step in the quest for higher accuracy tumor identification models.
+
+The Mask R-CNN model on the MIAS data set while sometimes able to accurately apply a bounding box to tumors, was unreliable in its capability to detect tumors, based on a review of prediction images.  Potentially on a larger data set, such as the DDSM dataset, Mask R-CNN will yield better consistency
+
+Recommendations:
+
+With complex images like this a large data set, such as the DDSM is needed.  Generating models that could beat the baseline on the MIAS dataset of 322 images was difficult without overfitting the model. 
+
+Running these images through a CNN is resource intensive.  With additional computing power and models that resist overfitting, the full image could be fed through without downsizing giving the model a chance to detect smaller tumors.
+
+Additional clarification on the pre-processing done to the DDSM image set would help understand the value of the set.  Understanding how rotated images and copies of images was done would help clear assurances there is no data leakage between validation and train sets.
+
+Additional image manipulation may give the model a better chance to fit, and is an avenue to continue to look down.
+
+With the complexity of the issue, working alongside an expert in mammography and oncology is critical.  The addition of metadata may yield additional accuracy.  Another approach may be to not just look at each mammograph in isolation, but in a time series per patient.
+
 
 ## References
 1. MIAS Data Source: http://peipa.essex.ac.uk/info/mias.html
