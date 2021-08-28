@@ -30,14 +30,16 @@ The CBIS-DDSM dataset was preprocessed before download, and most of the techniqu
 ### Data Sourcing, Cleaning, EDA & Data Augmentation
 Searched for labeled mammogram image datasets. In this step we extracted our images, chose our classification of Tumor/No Tumor, explored the distribution of classifications and features, and prepared our datasets for modeling. Data Augmentation was also utlized for image simplification with the use of bounding box calculations and region of interest (ROI) preprocessing.
 
-#### MIAS Dataset 
+#### MIAS Dataset  
 [Source](http://peipa.essex.ac.uk/info/mias.html)
+
 [Part_1A_MIAS_Dataset_Cleaning_&_EDA.ipynb](code/Part_1A_MIAS_Dataset_Cleaning_&_EDA.ipynb)
 
 ![mias_mask](images/mias_mask.png)
 
 #### DDSM Datasets 
 [Source](https://www.kaggle.com/skooch/ddsm-mammography)
+
 [Part_2A_DDSM_Dataset_Cleaning_&_EDA.ipynb](code/Part_2A_DDSM_Dataset_Cleaning_&_EDA.ipynb)
 
 ![density_subtlety](images/ddsm_density_subtlety.png)
