@@ -1,5 +1,6 @@
 # Classifying Tumors in Mammograms
-### By Ethan Kelly, Scott Locke, and Emily Siegel
+### By Ethan Kelly, Scott Locke and Emily Siegel
+
 
 ## Problem Statement
 
